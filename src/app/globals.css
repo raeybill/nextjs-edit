@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Use dark mode always */
+  --foreground-rgb: 255, 255, 255;
+  --global-background: #0E0D0D;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--global-background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-3xl font-bold mb-3;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold mb-2;
+  }
+
+  h4 {
+    @apply text-xl font-semibold mb-2;
+  }
+}
+
+.code-section {
+  --code-snippet-highlight-color: #ffffff1f;
+}
+
+.code-section.has-footer {
+  --code-snippet-highlight-color: #ffffff1f;
+  padding-bottom: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  @apply pb-2;
+}
+
+a {
+  @apply text-blue-400 font-bold;
+}
